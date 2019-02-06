@@ -1,0 +1,803 @@
+/*
+Theme Name: Platforma Z
+Theme URI: https://ogi-iii.github.io/myPortfolio/
+Description: サンプルテーマ
+Version: 1.0
+Author: KazukiOgiwara
+Author URI: https://ogi-iii.github.io/myPortfolio/
+*/
+
+@import url(css/sanitize.css);
+@import url(css/slick.css);
+
+* {
+    box-sizing: border-box;
+}
+
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Hiragino Kaku Gothic ProN W3', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@keyframes cloak-in {
+    0% {opacity: 0;}
+}
+
+body {
+    animation: cloak-in 4s;
+}
+
+header {
+    background-color: springgreen;
+    color: white;
+    width: 100%;
+    padding-top: 5px;
+    box-shadow: 0 3px 5px 1px gray;
+}
+
+header .headerLink {
+    color: white;
+    display: inline-block;
+    padding:0 5px;
+    line-height: 50px;
+    font-size: 15px;
+}
+
+header .headerLink:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+header .links {
+    text-align: right;
+    height: 50px;
+    padding: 0 20px;
+}
+
+header .title {
+    text-align: center;
+    padding: 10px 0;
+}
+
+header .headerTitle {
+    color: white;
+}
+
+header .contacts {
+    text-align: right;
+    padding: 10px 100px 20px;
+    font-size: 20px;
+}
+
+header h1 {
+    font-size: 40px;
+    padding: 5px 0;
+    text-shadow: 3px 3px 4px black;
+    font-family: 'Volkhov', serif;
+}
+
+header h2 {
+    font-size: 20px;
+    text-shadow: 3px 3px 4px black;
+    font-family: 'Volkhov', serif;
+}
+
+.categories {
+    padding: 20px 5%;
+}
+
+.category {
+    display: inline-block;
+    text-align: center;
+    float: left;
+    width: 16.6%;
+}
+
+.category a {
+    color: black;
+}
+
+.category img {
+    width: 90%;
+    max-width: 100px;
+}
+
+.category p {
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.category:hover {
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+.clear {
+    clear: left;
+}
+
+.imageLoop {
+    position: relative;
+}
+
+.imageLoop img {
+    width: 100%;
+}
+
+.imageLoop .slick-prev, .slick-next {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    z-index: 7;
+    background-color: white;
+    color: gray;
+    opacity: 0.7;
+    font-size: 25px;
+}
+
+.imageLoop .slick-prev:hover {
+    cursor: pointer;
+    opacity: 1.0;
+}
+
+.imageLoop .slick-next:hover {
+    cursor: pointer;
+    opacity: 1.0;
+}
+
+.imageLoop .slick-prev {
+    left: 0;
+}
+
+.imageLoop .slick-next {
+    right: 0;
+}
+
+.imageLoop p {
+    position: absolute;
+    z-index: 5;
+    top: 60%;
+    text-align: center;
+    width: 100%;
+    padding: 0 50px;
+    color: white;
+    font-size: 45px;
+    text-shadow: 4px 4px 3px black;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.values {
+    padding: 20px 10%;
+}
+
+.values .valuetitle {
+    font-size: 40px;
+    text-align: center;
+    color: black;
+    padding: 10px 0 30px;
+    text-shadow: 3px 3px 4px gray;
+}
+
+.value {
+    float: left;
+    text-align: center;
+    font-size: 18px;
+    width: 33.3%;
+}
+
+.value a {
+    color: black;
+}
+
+.value img {
+    padding-bottom: 5px;
+    width: 90%;
+    max-width: 100px;
+}
+
+.value:hover {
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+.articles {
+  padding: 50px 10% 70px 10%;
+}
+
+.articles .blogTitleLink {
+  color: black;
+}
+
+.articles .blogTitle {
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 30px;
+  text-shadow: 3px 3px 4px gray;
+}
+
+.articles .blogTitle:hover {
+  opacity: 0.5;
+}
+
+.post {
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 10px gray;
+}
+
+.post:hover {
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+.post a {
+  color: black;
+}
+
+.post img {
+  display: inline-block;
+  max-width: 50px;
+  padding-bottom: 5px;
+}
+
+.post .postTitle {
+  padding-bottom: 10px;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.post .postContent {
+  font-size: 15px;
+}
+
+footer {
+    background-color: springgreen;
+    color: white;
+    width: 100%;
+    padding-bottom: 20px;
+    box-shadow: 0 -3px 5px 1px gray;
+}
+
+footer a {
+    color: white;
+    display: inline-block;
+    padding:0 5px;
+    line-height: 50px;
+    font-size: 15px;
+}
+
+footer a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.references {
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 40px;
+}
+
+.references p {
+    text-align: left;
+    font-size: 30px;
+    padding: 20px 0 20px 10%;
+}
+
+.references img {
+    padding: 5px 20px;
+    max-width: 100px;
+}
+
+footer .links {
+    width: 50%;
+    display: inline-block;
+    float: left;
+    padding-left: 20px;
+}
+
+footer .sns {
+    width: 50%;
+    display: inline-block;
+    float: right;
+    text-align: right;
+    padding-right: 20px;
+}
+
+footer .sns img {
+    width: 90%;
+}
+
+#app .contentTitle {
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+
+#app .contentTitle img {
+    display: inline-block;
+    width: 90%;
+    max-width: 100px;
+    padding-right: 15px;
+}
+
+#app .contentTitle h2 {
+    display: inline-block;
+    color: black;
+    font-size: 40px;
+    text-shadow: 3px 3px 4px gray;
+}
+
+#app .contactButton {
+    text-align: center;
+    padding: 50px 0 100px;
+}
+
+#app .contactButton button {
+    background-color: springgreen;
+    padding: 15px;
+    font-size: 30px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 4px gray;
+}
+
+#app .contactButton a {
+    color: white;
+}
+
+#app .contactButton button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+#app .logLinks {
+    padding: 10px 20px;
+    font-size: 12px;
+}
+
+#category  {
+    padding: 50px 10%;
+}
+
+#category h2 {
+    font-size: 45px;
+    text-align: center;
+    color: black;
+    padding: 10px 0 30px;
+    text-shadow: 3px 3px 4px gray;
+    font-weight: normal;
+}
+
+#app .slide {
+  position: relative;
+}
+
+#app .slideWords {
+  position: absolute;
+  top: 5%;
+  left: 10px;
+  z-index: 5;
+  text-align: left;
+  padding: 0 50px;
+  color: springgreen;
+  font-size: 45px;
+  text-shadow: 4px 4px 3px black;
+  font-family: 'Philosopher', sans-serif;
+}
+
+#app .blogPost {
+  padding: 20px;
+  margin: 30px 20% 90px 20%;
+  box-shadow: 3px 3px 10px gray;
+}
+
+#app .blogPostContent .blogPostTitle {
+  padding-bottom: 20px;
+  font-size: 35px;
+}
+
+#app .blogPostContent {
+  color: black;
+  font-size: 20px;
+}
+
+#vueJs .component .v-enter-active, .v-leave-active {
+  transition: all 2s;
+}
+
+#vueJs .component .v-leave-active {
+  position: absolute;
+  width: 100%;
+}
+
+#vueJs .component .v-enter, .v-leave-to {
+  opacity: 0;
+}
+
+#vueJs .component {
+  position: relative;
+  text-align: center;
+  margin: 100px 0 0;
+}
+
+#vueJs .component img {
+  height: 400px;
+}
+
+#vueJs .wideComponents .component img {
+  height: 300px;
+}
+
+#vueJs .component li p {
+  position: absolute;
+  top: 5%;
+  width: 100%;
+  z-index: 5;
+  text-align: center;
+  padding: 0 50px;
+  color: springgreen;
+  font-size: 35px;
+  text-shadow: 4px 4px 3px black;
+  font-family: 'Philosopher', sans-serif;
+}
+
+#vueJs .component .componentComment {
+  padding: 10px 0;
+  font-size: 25px;
+}
+
+#vueJs .component button {
+  background-color: gray;
+  color: white;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 4px;
+  box-shadow: 3px 3px 4px gray;
+}
+
+#vueJs .component button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+#vueJs .eachComponent {
+  width: 50%;
+  float: left;
+}
+
+#vueJs .twinComponent {
+  margin-bottom: 70px;
+}
+
+@media all and (max-width: 1000px) {
+
+    header a {
+        padding:0 5px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    header .contacts {
+        text-align: right;
+        padding: 10px 30px 20px;
+        font-size: 15px;
+    }
+
+    .category p {
+        font-size: 12px;
+    }
+
+    .imageLoop p {
+        font-size: 30px;
+    }
+
+    .values .valuetitle {
+        font-size: 30px;
+    }
+
+    .value {
+        font-size: 12px;
+    }
+
+    .articles .blogTitle {
+      font-size: 30px;
+    }
+
+    .post .postTitle {
+      font-size: 18px;
+    }
+
+    .post img {
+      max-width: 40px;
+    }
+
+    .post .postContent {
+      font-size: 12px;
+    }
+
+    footer a {
+        padding:0 5px;
+        line-height: 30px;
+        font-size: 10px;
+    }
+
+    footer .references {
+        width: 100%;
+        display: inline-block;
+        float: none;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .references p {
+        font-size: 20px;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .references img {
+        padding: 5px 0;
+        max-width: 70px;
+    }
+
+    footer .links {
+        width: 100%;
+        display: inline-block;
+        float: none;
+        text-align: center;
+        padding-left: 0px;
+        padding-bottom: 30px;
+    }
+
+    footer .links a {
+        font-size: 18px;
+    }
+
+    footer .sns {
+        width: 100%;
+        display: inline-block;
+        float: none;
+        text-align: center;
+        padding-right: 0px;
+    }
+
+    #app .contentTitle h2 {
+        font-size: 25px;
+    }
+
+    #app .contactButton button {
+        font-size: 20px;
+    }
+
+    #category h2 {
+        font-size: 35px;
+        padding: 10px 0 20px;
+    }
+
+    #app .slideWords {
+      font-size: 35px;
+    }
+
+    #app .blogPost {
+      padding: 15px;
+      margin: 30px 10% 90px 10%;
+    }
+
+    #app .blogPostContent .blogPostTitle {
+      padding-bottom: 15px;
+      font-size: 30px;
+    }
+
+    #app .blogPostContent {
+      color: black;
+      font-size: 15px;
+    }
+
+    #vueJs .component img {
+      height: 300px;
+    }
+
+    #vueJs .wideComponents .component img {
+      height: 190px;
+    }
+
+    #vueJs .component li p {
+      font-size: 25px;
+    }
+
+    #vueJs .component .componentComment {
+      font-size: 15px;
+    }
+
+    #vueJs .component button {
+      font-size: 15px;
+    }
+
+    #vueJs .component {
+      margin: 85px 0 0;
+    }
+
+}
+
+@media all and (max-width: 600px) {
+
+    header a {
+        padding:0 1px;
+        line-height: 30px;
+        font-size: 5px;
+    }
+
+    header .links {
+        text-align: center;
+        padding: 0;
+    }
+
+    header h1 {
+        font-size: 30px;
+        padding-top: 25px;
+    }
+
+    header h2 {
+        font-size: 15px;
+    }
+
+    header .contacts {
+        text-align: right;
+        padding: 10px 20px 20px;
+        font-size: 10px;
+    }
+
+    .category {
+        width: 33.3%;
+    }
+
+    .category img {
+        max-width: 50px;
+    }
+
+    .category p {
+        font-size: 7px;
+    }
+
+    .imageLoop p {
+        font-size: 15px;
+    }
+
+    .values .valuetitle {
+        font-size: 20px;
+    }
+
+    .value {
+        font-size: 7px;
+    }
+
+    .value img {
+        max-width: 50px;
+    }
+
+    .articles .blogTitle {
+      font-size: 20px;
+    }
+
+    .post .postTitle {
+      font-size: 13px;
+    }
+
+    .post .postContent {
+      font-size: 7px;
+    }
+
+    .post img {
+      max-width: 30px;
+    }
+
+    footer a {
+        padding:0 5px;
+        line-height: 30px;
+        font-size: 10px;
+    }
+
+    .references p {
+        font-size: 15px;
+    }
+
+    .references img {
+        max-width: 40px;
+    }
+
+    footer .links a {
+        font-size: 5px;
+    }
+
+    footer .sns span {
+        font-size: 10px;
+    }
+
+    footer .sns img {
+        max-width: 40px;
+    }
+
+    #app .contentTitle img {
+        max-width: 50px;
+        padding-right: 5px;
+    }
+
+    #app .contentTitle h2 {
+        font-size: 14px;
+    }
+
+    #app .contactButton button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #app .logLinks {
+        font-size: 8px;
+    }
+
+    #category h2 {
+        font-size: 25px;
+        padding: 0 0 10px;
+    }
+
+    #app .slideWords {
+      font-size: 25px;
+    }
+
+    #app .blogPost {
+      padding: 10px;
+      margin: 10px 5% 50px 5%;
+    }
+
+    #app .blogPostContent .blogPostTitle {
+      padding-bottom: 10px;
+      font-size: 20px;
+    }
+
+    #app .blogPostContent {
+      color: black;
+      font-size: 10px;
+    }
+
+    #vueJs .component img {
+      height: 160px;
+    }
+
+    #vueJs .wideComponents .component img {
+      height: 160px;
+    }
+
+    #vueJs .component li p {
+      font-size: 15px;
+    }
+
+    #vueJs .component .componentComment {
+      font-size: 9px;
+    }
+
+    #vueJs .component button {
+      font-size: 13px;
+    }
+
+    #vueJs .component {
+      margin: 70px 0 0;
+    }
+
+    #vueJs .eachComponent {
+      width: 100%;
+      float: none;
+    }
+
+    #vueJs .twinComponent {
+      margin-bottom: 40px;
+    }
+
+}
